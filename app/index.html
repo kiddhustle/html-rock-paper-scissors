@@ -29,47 +29,10 @@
       <h1>Rock Paper Scissors game</h1>
       <div id="home">
         <p>Please select a game to play</p>
-        <ul>
+        <ol>
           <li><a id="play_human" data-player="human" class="btnstart">Human vs Computer</a></li>
           <li><a id="play_computer" data-player="computer" class="btnstart">Computer vs Computer</a></li>
-        </ul>
-      </div>
-      
-      <div id="play" class="page">
-        <p>Play game</p>
-        <div class="gamewindow">
-          <div class="gamewindow__moves">
-            <p>Please select a move from options below before the countdown ends:</p>
-            <div class="gamewindow__moves__options">
-                <a href="#rock" class="gamewindow__moves__options__item" title="click to select Rock">
-                  <img class="gamewindow__moves__options__item__img" alt="Rock" src="images/rock.jpg" />
-                </a>
-                <a href="#paper" data-move="paper" title="click to select Paper">
-                  <img class="gamewindow__moves__options__item__img" alt="Paper" src="images/paper.jpg" />
-                </a>
-                <a href="#scissors" data-move="scissors" title="click to select Scissors">
-                  <img class="gamewindow__moves__options__item__img" alt="Scissors" src="images/scissors.jpg" />
-                </a>
-            </div>
-            <div class="gamewindow__moves__options">
-                <a href="#rock" class="gamewindow__moves__options__item" title="click to select Rock">
-                  <img class="gamewindow__moves__options__item__img" alt="Rock" src="images/rock.jpg" />
-                </a>
-                <a href="#paper" data-move="paper" title="click to select Paper">
-                  <img class="gamewindow__moves__options__item__img" alt="Paper" src="images/paper.jpg" />
-                </a>
-                <a href="#scissors" data-move="scissors" title="click to select Scissors">
-                  <img class="gamewindow__moves__options__item__img" alt="Scissors" src="images/scissors.jpg" />
-                </a>
-            </div>
-            <div class="gamewindow__countdown">3</div>
-            <a class="button">Reset</a>
-          </div>
-        </div>
-      </div>
-      
-      <div id="simulate" class="page">
-        <p>Simulate game</p>
+        </ol>
       </div>
       <div id="render"></div>
     </div>
@@ -100,14 +63,19 @@
             </a>
           </div>
           <div class="gamewindow__body__content">
-            <p>Please select a move from options below before the countdown ends:</p>
+            <p>Click the <strong>Play button</strong> to start the game.</p>
+            <p>Select a move from the <strong>left set of icons</strong> before the countdown ends.</p>
           </div>
           <div class="gamewindow__body__footer">
             <div class="gamewindow__body__footer__content">
-              <div class="player_icon">H</div>
-              <div class="player_icon" data-role="opponent">C</div>
-              <a class="button" id="btn_play_game" href="#">Play</a>
-              <a class="button" id="btn_home" href="#">Home</a>
+              <div class="player_icon" title="Player 1: Human">
+                <img src="images/icons/human-48x48.png" alt="human icon" />
+              </div>
+              <div class="player_icon" title="Player 2: Computer" data-role="opponent">
+                <img src="images/icons/computer-48x48.png" alt="computer icon" />
+              </div>
+              <a class="button play" id="btn_play_game" href="#" title="Click to play game">Play</a>
+              <a class="button" id="btn_home" href="#" title="Click to go home">Home</a>
             </div>
             </div>
             
@@ -149,14 +117,20 @@
             </a>
           </div>
           <div class="gamewindow__body__content">
-            <p>Please select a move from options below before the countdown ends:</p>
+            <p>Click the <strong>Play< button/strong> to start the game.</p>
+            <p>The <strong>computer</strong> will play against the <strong>computer</strong>?</p>
+            <p>Who will wins? Player 1 or Player 2!</p>
           </div>
           <div class="gamewindow__body__footer">
             <div class="gamewindow__body__footer__content">
-              <div class="player_icon">C</div>
-              <div class="player_icon" data-role="opponent">C</div>
-              <a class="button" id="btn_play_game" href="#">Play</a>
-              <a class="button" id="btn_home" href="#">Home</a>
+              <div class="player_icon" title="Player 1: Computer">
+                <img src="images/icons/computer-48x48.png" alt="computer icon" />
+              </div>
+              <div class="player_icon" title="Player 2: Computer" data-role="opponent">
+                <img src="images/icons/computer-48x48.png" alt="computer icon" />
+              </div>
+              <a class="button play" id="btn_play_game" href="#" title="Click to play game">Play</a>
+              <a class="button" id="btn_home" href="#" title="Click to go home">Home</a>
             </div>
             </div>
             
@@ -183,7 +157,6 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
         <!-- build:js scripts/bundle.js -->
         <script src="scripts/bundle.js"></script>
         <!-- endbuild -->

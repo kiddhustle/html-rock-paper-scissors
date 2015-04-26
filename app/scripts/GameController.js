@@ -30,6 +30,7 @@ var GameController = function(){
 			// display winner
 			this.displayWinner();
 			this.gameDurationInterationCount = 0;
+			$('.button').show();
 		}
 		else {
 			self.gameDurationInterationCount++;
@@ -57,6 +58,7 @@ var GameController = function(){
 
 	self.runGame = function(){
 		console.log('run game');
+		$('.button').hide();
 		// rm classes
 		$('.gamewindow__body__moves__options__item').removeClass('winner loser');
 		// render display

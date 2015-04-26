@@ -122,6 +122,10 @@ body {
   color:#ffffff;
   border-radius:5px;
   display:inline-block;
+  text-decoration: none;
+  &.play {
+    background-color:#EE7621;
+  }
 }
 
 .player_icon {
