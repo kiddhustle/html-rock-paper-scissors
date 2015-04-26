@@ -1,11 +1,11 @@
 ## Installation
 Run:
-		npm install
-		bower install
+		`npm install`
+		`bower install`
 ## Development
 Run:
-    gulp
+    `gulp`
 ## Build
 Will build in the dist/ directory
 Run:
-    gulp build
+    `gulp build`
