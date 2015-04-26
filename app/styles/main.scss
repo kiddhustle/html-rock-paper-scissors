@@ -1,0 +1,143 @@
+$icon-font-path: '../fonts/';
+
+$icon_borderwidth:2px;
+// bower:scss
+// endbower
+
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+*, *:before, *:after {
+  box-sizing:-webkit-border-box;
+  box-sizing:border-box;
+}
+/* Space out content a bit */
+
+body {
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  background:#000000;
+  color:#f7f7f7;
+}
+
+.layout {
+  max-width:800px;
+  margin: 0px auto;
+  text-align:center;
+}
+
+.page {
+  display:none;
+
+  &:target {
+    display:block;
+  }
+}
+
+.btnstart {
+  cursor:pointer;
+}
+
+.gamewindow {
+  height:400px;
+  min-width:400px;
+  background:#f7f7f7;
+  color:#000000;
+  position: relative;
+}
+.gamewindow__body {
+  width:100%;
+  height:100%;
+}
+
+.gamewindow__body__content {
+  width:200px;
+  height:300px;
+  margin: 0px auto;
+  padding-top:10px;
+}
+
+.gamewindow__body__footer {
+  position:absolute;
+  bottom:0px;
+  height:100px;
+  width:100%;
+  background:#dddddd;
+  
+}
+
+.gamewindow__body__footer__content {
+  position:relative;
+  height:100%;
+  padding:20px 10px;
+}
+.gamewindow__countdown {
+  font-size:8em;
+}
+
+.gamewindow__body__moves__options {
+  text-align:left;
+  width:100px;
+  position:absolute;
+  // left:0px;
+  top:0px;
+  z-index: 1;
+  &[data-role="opponent"] {
+    right:0px;
+  }
+}
+
+.gamewindow__body__moves__options__item {
+  display:inline-block;
+  width:96px;
+  height:96px;
+  border:$icon_borderwidth #cccccc solid;
+  &:hover,&:focus {
+    border:$icon_borderwidth #dddddd solid;
+  }
+  &.selected {
+    border:$icon_borderwidth #000000 solid;
+  }
+  &.winner {
+    border:$icon_borderwidth #00ff00 solid; 
+  }
+  &.loser {
+    border:$icon_borderwidth #ff0000 solid; 
+  }
+}
+.gamewindow__body__moves__options__item__img {
+  max-width:100%;
+}
+.button {
+  max-width:4em;
+  height:2em;
+  margin:0px auto;
+  padding:0.5em;
+  background:#0000ff;
+  color:#ffffff;
+  border-radius:5px;
+  display:inline-block;
+}
+
+.player_icon {
+  font-size:2em;
+  font-weight:bold;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:25px;
+  &[data-role="opponent"] {
+    right:0px;
+  }
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
