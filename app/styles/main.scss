@@ -23,6 +23,12 @@ body {
   // padding-bottom: 20px;
   background:#000000;
   color:#f7f7f7;
+  padding:0px;
+  margin:0px;
+}
+
+a {
+  color:#aa0000;
 }
 
 .layout {
@@ -140,8 +146,22 @@ body {
   }
 }
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+@media screen and (max-width: 360px) {
+  .gamewindow {
+    width:300px;
+  }
+  .gamewindow__body__content {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .gamewindow__body__content {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .gamewindow__body__content {
+    width: 600px;
   }
 }
